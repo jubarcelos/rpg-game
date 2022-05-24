@@ -1,10 +1,10 @@
 abstract class Race {
   protected _name: string;
-  dexterity: number;
+  protected _dexterity: number;
 
   constructor(name: string, dexterity: number) {
     this._name = name;
-    this.dexterity = dexterity;
+    this._dexterity = dexterity;
   }
 
   static createdRacesInstances(): number {
@@ -12,6 +12,7 @@ abstract class Race {
   }
 
   abstract get maxLifePoints():number;
+  
   get name(): string {
     return this.name;
   }
