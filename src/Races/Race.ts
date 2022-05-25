@@ -16,6 +16,10 @@ abstract class Race {
   get name(): string {
     return this.name;
   }
+
+  get dexterity(): number {
+    return this._dexterity;
+  }
 }
 
 export default Race;
