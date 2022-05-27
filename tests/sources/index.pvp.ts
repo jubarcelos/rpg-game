@@ -1,4 +1,4 @@
-import { pvp } from '../../src/Fighter';
+import { pvp } from '../../src';
 import { PVP } from '../../src/Battle';
 
 const func = (p: PVP) => { };
