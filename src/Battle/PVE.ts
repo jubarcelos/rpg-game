@@ -7,10 +7,9 @@ class PVP extends Battle {
   constructor(player: Fighter, allOrOne: SimpleFighter[]) {
     super(player);
     this._allOrOne = allOrOne;
-    this.combat();
   }
 
-  combat(): void {
+  protected combat(): void {
     for (let index = 0; index < this._allOrOne.length; index += 1) {
       while (this.player.lifePoints > 0
         && this._allOrOne[index].lifePoints > 0) {
@@ -18,6 +17,11 @@ class PVP extends Battle {
         this._allOrOne[index].attack(this.player);
       }
     }
+  }
+
+  fight(): number {
+    this.combat();
+    return super.fight();
   }
 }
 
